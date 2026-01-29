@@ -6,7 +6,7 @@ class bloomin:
         self.table[index] = 1
 
     def hash(self, key):
-        return (key+(2**key)) % len(self.table)
+        return (key+(2**key)+67) % len(self.table)
     
     def check(self, key):
         index = self.hash(key)

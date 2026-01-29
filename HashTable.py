@@ -4,7 +4,7 @@ class HashTable:
         self.table = [[] for _ in range(size)]
 
     def hf(self, key):
-        return key % self.size
+        return (key + 67) % self.size
 
     def ik(self, key, value):
         index = self.hf(key)
